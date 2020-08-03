@@ -6,6 +6,7 @@
 
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage{CJKutf8}
 \usepackage{graphicx}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -69,7 +70,12 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   JAPANESE INPUT  %%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ja}[1]{\begin{CJK}{UTF8}{ipxm}#1\end{CJK}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
@@ -82,14 +88,12 @@
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.25\linewidth]{8810.jpg}
+  \includegraphics[width=0.25\linewidth]{colin.jpg}
 \end{figure}
-%% \begin{center}
-%%   Photo here
-%% \end{center}
 
 \begin{center}
-Full-stack developer and avid contributor to Open Source. \\ Former teacher skilled at public speaking in both Japanese and English.
+  \ja{フルスタック開発者・オープンソース経験者} \\
+  \ja{カナダの「生産的開発者ランキング」トップ２０に選抜} \\
 \end{center}
 
 %--------PROGRAMMING SKILLS------------
