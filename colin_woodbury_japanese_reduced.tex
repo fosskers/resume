@@ -1,0 +1,181 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{CJKutf8}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small #3 & \small #4 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.fosskers.ca/}{\Large Colin Woodbury}} & Email : \href{mailto:colin@fosskers.ca}{colin@fosskers.ca}\\
+  \href{https://www.fosskers.ca/jp/cv}{https://www.fosskers.ca/jp/cv} & Mobile : +1-604-812-4532 \\
+\end{tabular*}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.25\linewidth]{colin.jpg}
+\end{figure}
+
+\begin{CJK}{UTF8}{ipxma}
+
+%-----------EXPERIENCE-----------------
+\section{経歴}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {受託開発}{日本、カナダ、アメリカ}
+  {Rust・Go・Typescript開発（リモート)}{２０２０年５月から現在まで}
+  \resumeItemListStart
+  \resumeItem{バックエンド開発}{様々な分野と技術による受託開発}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Kadena}{アメリカ・ニューヨーク}
+  {Haskell 開発（リモート）}{２０１８年８月から２０２０年５月まで}
+  \resumeItemListStart
+  \resumeItem{バックエンド開発}{Chainwebプロジェクトの全面開発・ネットワーキング・アルゴリズム研究}
+  \resumeItem{システム管理}{主な管理者・AWSとTerraformでサーバー保守}
+  \resumeItem{ドキュメンテーション}{Pactプロジェクトの和訳}
+  \resumeItem{会社代表}{日本、アメリカ、カナダでカンファレンス発表}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Azavea}{アメリカ・フィラデルフィア}
+  {Scala 開発（リモート）}{２０１６年５月から２０１７年１２月まで}
+  \resumeItemListStart
+  \resumeItem{バックエンド開発}{地理情報の一括処理ライブラリ（GeoTrellis）を保守・他社の依頼を受けてシステム実装}
+  \resumeItem{研究}{地理情報システムのアルゴリズムを研究、考案、実装}
+  %% \resumeItem{VectorPipe}{Wrote a library to process Vector Tile data through GeoTrellis.}
+  %% \resumeItem{VectorTiles}{Wrote Haskell and Scala libraries that implement the Mapbox Vector Tiles spec.}
+  \resumeItem{システム管理}{Terraformを導入・AWSでサーバー管理}
+  \resumeItem{教育}{社内のプログラミング言語勉強会で指導}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Adenda Media}{カナダ・バンクーバー}
+  {Scala 開発}{２０１４年５月から２０１６年４月まで}
+  \resumeItemListStart
+  \resumeItem{バックエンド開発}{Playに基づいたバックエンドを保守}
+  \resumeItem{フロントエンド開発}{Twitter Bootstrapのウェブアプリを実装}
+  \resumeItem{人工知能}{Apache Sparkを通して推薦システムを開発}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {佐世保市教育委員会}{長崎県佐世保市}
+  {英語準教師 (ALT)}{２０１０年８月から２０１３年７月まで}
+  \resumeItemListStart
+  \resumeItem{小中学校の英語教育}{小中学生に英語を教授・日本人同僚を支援}
+  \resumeItem{中学の英会話部}{担当・市のスピーチコンテストに参加する生徒を指導}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{学歴}
+\resumeSubHeadingListStart
+\resumeSubheading
+{サイモンフレーザー大学}{カナダ・バンクーバー}
+{学士号}{２０１３年９月から２０１６年４月まで}
+  \resumeItemListStart
+  \resumeItem{専門}{Computing Science}
+  \resumeItem{生徒会}{２０１４年度CS学部生徒会副会長・２０１５年度同学部生徒会会長}
+  \resumeItem{コーラス部}{部長}
+  \resumeItem{業績}{２年連続、優等生名簿に挙げられた}
+  \resumeItemListEnd
+
+\resumeSubheading
+{佐賀大学}{佐賀県佐賀市}
+{SPACEプログラム・言語学習短期留学}{２００８年９月から２００９年８月まで}
+  \resumeItemListStart
+  \resumeItem{部活}{茶道部部員}
+  \resumeItem{業績}{学期末のスピーチコンテスト優勝}
+  \resumeItemListEnd
+
+\resumeSubheading
+{マニトバ大学}{カナダ・ウィニペグ}
+{四年間の学士号}{２００６年９月から２０１０年４月まで}
+  \resumeItemListStart
+  \resumeItem{専門}{アジア史と言語}
+  \resumeItem{業績}{優等生名簿に挙げられた}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{資格・免許}
+\resumeSubHeadingListStart
+\resumeSubItem{日本語能力試験 (JLPT)}{N1}
+\resumeSubItem{漢字検定}{準二級}
+\resumeSubHeadingListEnd
+
+\end{CJK}
+\end{document}
