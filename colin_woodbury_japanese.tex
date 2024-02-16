@@ -6,18 +6,23 @@
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{CJKutf8}
+% Japanese Settings
+\usepackage[bidi=default]{babel}
+\babelprovide[import]{japanese}
+\babelfont[japanese]{rm}{IPAexMincho}
+
+% % \usepackage{CJKutf8}
 \usepackage{graphicx}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
+% \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
+% \usepackage[english]{babel}
 \usepackage{tabularx}
 
 \pagestyle{fancy}
@@ -44,8 +49,8 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-%-------------------------
-% Custom commands
+% %-------------------------
+% % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
@@ -69,15 +74,15 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
+% %-------------------------------------------
+% %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-%----------HEADING-----------------
+% %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{https://www.fosskers.ca/}{\Large Colin Woodbury}} & Email : \href{mailto:colin@fosskers.ca}{colin@fosskers.ca}\\
-  \href{https://www.fosskers.ca/jp/cv}{https://www.fosskers.ca/jp/cv} & Mobile : +1-604-812-4532 \\
+  \href{https://www.fosskers.ca/jp/cv}{https://www.fosskers.ca/jp/cv} & Mobile : 080-2663-3766 \\
 \end{tabular*}
 
 \begin{figure}[h!]
@@ -85,34 +90,47 @@
   \includegraphics[width=0.25\linewidth]{colin.jpg}
 \end{figure}
 
-\begin{CJK}{UTF8}{ipxma}
+\selectlanguage{japanese}
+
 \begin{center}
   フルスタック開発者・オープンソース経験者 \\
   カナダの「生産的開発者ランキング」トップ１５に選抜 \\
 \end{center}
 
-%--------PROGRAMMING SKILLS------------
+% %--------PROGRAMMING SKILLS------------
 \section{能力}
 \resumeSubHeadingListStart
-\item{\textbf{プログラミング言語}: Haskell, Rust, Go, Typescript, Scala, Python, C}
-\item{\textbf{ウェブ技術}: Terraform, GraphQL, AWS, Docker, Web Assembly}
-\item{\textbf{その他}: Linux, Git, SQL, DGraph, MongoDB, Apache Spark}
+\item{\textbf{プログラミング言語}{: Rust, Haskell, Common Lisp, Clojure, Elixir, Go, Scala, Python, C}}
+\item{\textbf{ウェブ技術}{: Terraform, GraphQL, AWS, Docker, Web Assembly}}
+\item{\textbf{その他}{: Linux, Git, SQL, MongoDB, Apache Spark}}
 \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------------
+% %-----------EXPERIENCE-----------------
 \section{経歴}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-  {受託開発}{日本、カナダ}
-  {Rust・Go・Typescript開発（リモート)}{２０２０年５月から現在まで}
+    {キャディ株式会社}{東京}
+    {Rust 開発}{２０２２年９月〜現在}
+    \resumeItemListStart
+    \resumeItem{図面分析}{顧客のデータを処理するパイプラインの自動化・コスト削減}
+    \resumeItem{ライブラリ開発}{様々なバックエンドツールを実装・メンテ}
+    \resumeItem{開発基準}{社内のRust開発基準を成立・普及}
+    \resumeItem{社内教育}{勉強会でRust技術を教え、初心者に直接指導}
+    \resumeItemListEnd
+
+\resumeSubheading
+  {受託開発}{日本とカナダ}
+  {Rust・Go・Typescript開発（リモート)}{２０２０年５月〜２０２２年７月}
   \resumeItemListStart
-  \resumeItem{バックエンド開発}{様々な分野と技術による受託開発}
+  \resumeItem{ブラウザーエクステンション}{NLPに基づくエクステンションをRust/WASMで開発}
+  \resumeItem{教育ソフト}{子供の文字練習アプリを作成}
+  \resumeItem{ストリーミングサービス}{GolangとGraphQLによるユーザー検索機能を実装}
   \resumeItemListEnd
 
 \resumeSubheading
   {Kadena}{アメリカ・ニューヨーク}
-  {Haskell 開発（リモート）}{２０１８年８月から２０２０年５月まで}
+  {Haskell 開発（リモート）}{２０１８年８月〜２０２０年５月}
   \resumeItemListStart
   \resumeItem{バックエンド開発}{Chainwebプロジェクトの全面開発・ネットワーキング・アルゴリズム研究}
   \resumeItem{システム管理}{主な管理者・AWSとTerraformでサーバー保守}
@@ -122,7 +140,7 @@
 
 \resumeSubheading
   {Azavea}{アメリカ・フィラデルフィア}
-  {Scala 開発（リモート）}{２０１６年５月から２０１７年１２月まで}
+  {Scala 開発（リモート）}{２０１６年５月〜２０１７年１２月}
   \resumeItemListStart
   \resumeItem{バックエンド開発}{地理情報の一括処理ライブラリ（GeoTrellis）を保守・他社の依頼を受けてシステム実装}
   \resumeItem{研究}{地理情報システムのアルゴリズムを研究、考案、実装}
@@ -134,7 +152,7 @@
 
 \resumeSubheading
   {Adenda Media}{カナダ・バンクーバー}
-  {Scala 開発}{２０１４年５月から２０１６年４月まで}
+  {Scala 開発}{２０１４年５月〜２０１６年４月}
   \resumeItemListStart
   \resumeItem{バックエンド開発}{Playに基づいたバックエンドを保守}
   \resumeItem{フロントエンド開発}{Twitter Bootstrapのウェブアプリを実装}
@@ -143,7 +161,7 @@
 
 \resumeSubheading
   {佐世保市教育委員会}{長崎県佐世保市}
-  {英語準教師 (ALT)}{２０１０年８月から２０１３年７月まで}
+  {英語準教師 (ALT)}{２０１０年８月〜２０１３年７月}
   \resumeItemListStart
   \resumeItem{小中学校の英語教育}{小中学生に英語を教授・日本人同僚を支援}
   \resumeItem{中学の英会話部}{担当・市のスピーチコンテストに参加する生徒を指導}
@@ -151,12 +169,12 @@
 
 \resumeSubHeadingListEnd
 
-%-----------EDUCATION-----------------
+% %-----------EDUCATION-----------------
 \section{学歴}
 \resumeSubHeadingListStart
 \resumeSubheading
 {サイモンフレーザー大学}{カナダ・バンクーバー}
-{学士号}{２０１３年９月から２０１６年４月まで}
+{学士号}{２０１３年９月〜２０１６年４月}
   \resumeItemListStart
   \resumeItem{専門}{Computing Science}
   \resumeItem{生徒会}{２０１４年度CS学部生徒会副会長・２０１５年度同学部生徒会会長}
@@ -166,7 +184,7 @@
 
 \resumeSubheading
 {佐賀大学}{佐賀県佐賀市}
-{SPACEプログラム・言語学習短期留学}{２００８年９月から２００９年８月まで}
+{SPACEプログラム・言語学習短期留学}{２００８年９月〜２００９年８月}
   \resumeItemListStart
   \resumeItem{部活}{茶道部部員}
   \resumeItem{業績}{学期末のスピーチコンテスト優勝}
@@ -174,7 +192,7 @@
 
 \resumeSubheading
 {マニトバ大学}{カナダ・ウィニペグ}
-{四年間の学士号}{２００６年９月から２０１０年４月まで}
+{四年間の学士号}{２００６年９月〜２０１０年４月}
   \resumeItemListStart
   \resumeItem{専門}{アジア史と言語}
   \resumeItem{業績}{優等生名簿に挙げられた}
@@ -182,33 +200,31 @@
 
 \resumeSubHeadingListEnd
 
-%-----------CERTIFICATIONS-----------
+% %-----------CERTIFICATIONS-----------
 \section{資格・免許}
 \resumeSubHeadingListStart
 \resumeSubItem{日本語能力試験 (JLPT)}{N1}
-\resumeSubItem{漢字検定}{準二級}
+\resumeSubItem{漢字検定}{二級}
 \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------------
+% %-----------PROJECTS-----------------
 \section{オープンソース}
 
 \resumeSubHeadingListStart
 \resumeSubItem{\href{https://github.com/aurapm/aura}{Aura}}{(Haskell) Arch Linuxのパッケージ管理ツール・数千人のユーザーを誇る}
-\resumeSubItem{\href{https://github.com/fosskers/active}{Active}}{(Go) Github Actionsを更新するツール}
-\resumeSubItem{\href{https://github.com/fosskers/credit}{Credit}}{(Rust) プロジェクト活躍を測るツール}
-\resumeSubItem{\href{https://github.com/fosskers/rs-kanji}{Kanji}}{(Rust) 日本漢字の分析}
+\resumeSubItem{\href{https://github.com/fosskers/cl-transducers}{Transducers}}{(Common Lisp) 快適かつ効率のよいデータ処理}
+\resumeSubItem{Totp}{(\href{https://pkg.go.dev/github.com/fosskers/totp}{Golang}/\href{https://crates.io/crates/totp-lite}{Rust}) Time-based One-time Passwordsのライブラリ}
 \resumeSubItem{\href{https://github.com/fosskers/mapalgebra}{MapAlgebra}}{(Haskell) 地理情報システムのライブラリ}
-\resumeSubItem{\href{https://github.com/geotrellis/vectorpipe}{VectorPipe}}{(Scala) GeoTrellisを通してVectorTile処理}
 \resumeSubHeadingListEnd
 
-%-----------HOBBIES-----------
+% %-----------HOBBIES-----------
 \section{趣味}
 \resumeSubHeadingListStart
-\resumeSubItem{オープンソース開発}{Aura・ライブラリの実装や保守}
-\resumeSubItem{クライミング}{トップロープ・ボルダリング・大会にも出場}
+\resumeSubItem{オープンソース開発}{120以上のオープンソースプロジェクト}
+\resumeSubItem{スポーツ}{クライミング・スノボ・ゴルフ}
 \resumeSubItem{言語学習}{日本語・ドイツ語・イタリア語・エスペラント語}
-\resumeSubItem{音楽}{コーラス・サックス}
+\resumeSubItem{音楽}{コーラス・ベース}
+\resumeSubItem{ジュエリー}{指輪を設計・作り上げ}
 \resumeSubHeadingListEnd
 
-\end{CJK}
 \end{document}
